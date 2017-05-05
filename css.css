@@ -1,0 +1,33 @@
+.wrapper_pic{
+    margin:50px auto;
+    width: 560px;
+    height: 477px;
+    background-color: #80cdc6;
+    position: relative;
+    overflow: auto;
+}
+
+.clouds{
+    position: absolute;
+    top: -6px;
+    right: 0;
+    width: 347px;
+    z-index:4;
+}
+.water{
+    position: absolute;
+    bottom:0;
+    z-index:3;
+}
+.ship{
+    position: absolute;
+    left: 17px;
+    bottom: 40px;
+    width: 116px;
+    z-index:2;
+}
+.world{
+    position: absolute;
+    bottom: 25px;
+    z-index:1;
+}
