@@ -1,33 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 .wrapper_pic{
     margin:50px auto;
     width: 560px;
-    height: 477px;
-    background-color: #80cdc6;
+    height: 450px;
     position: relative;
-    overflow: auto;
+    overflow: hidden;
+    background: url("img/world.svg") 0 110px no-repeat #80cdc6 ;
 }
-
-.clouds{
+.wrapper_pic img{
     position: absolute;
+}
+.clouds{
     top: -6px;
-    right: 0;
+    right: -347px;
     width: 347px;
     z-index:4;
+    animation-name: clouds;
+    animation-duration: 55s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: cubic-bezier(0,0,1,1);
+}
+@keyframes clouds{
+    0%{
+        right: -347px;
+    }
+    100%{
+        right: 560px;
+    }
 }
 .water{
-    position: absolute;
-    bottom:0;
+    left: -4px;
+    width: 580px;
+    height:50px;
+    bottom: 0;
     z-index:3;
+    animation-name: water;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /*animation-delay: 1s;*/
+}
+@keyframes water{
+    0%{
+        left: -4px;
+        bottom: 0;
+    }
+    50%{
+        left: -2px;
+        bottom: -1px;
+    }
+    10%{
+        left: -4px;
+        bottom: 0;
+    }
 }
 .ship{
-    position: absolute;
     left: 17px;
     bottom: 40px;
     width: 116px;
     z-index:2;
+    animation-name: ship1;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+
+    /*animation-delay: 1s;*/
 }
-.world{
-    position: absolute;
-    bottom: 25px;
-    z-index:1;
+@keyframes ship1{
+    0%{
+        left: -116px;
+        bottom: 40px;
+    }
+    100%{
+        left: 560px;
+        bottom: 40px;
+    }
 }
+.comet{
+    top: -30px;
+    left: -30px;
+    width: 30px;
+    animation-name: comet;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: cubic-bezier(0,0,1,1);
+
+}
+
+@keyframes comet{
+    0%{
+        top: 0;
+        left: 0;
+    }
+    100%{
+        top: 450px;
+        left: 550px;
+    }
+}
+.sun{
+    top: 185px;
+    left: -60px;
+    width: 60px;
+    animation-name: sun;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    z-index: 10;
+    animation-timing-function: cubic-bezier(0,0,1,1);
+    animation-delay: 2s;
+}
+@keyframes sun{
+    0%{
+        left:  -60px;
+        top: 180px;
+    }
+    10%{
+        left: 8px;
+        top: 150px;
+    }
+    20%{
+        left:  76px;
+        top: 120px;
+    }
+    30%{
+        left: 144px;
+        top: 90px;
+    }
+    40%{
+        left:  212px;
+        top: 60px;
+    }
+    50%{
+        left: 280px;
+        top: 30px;
+    }
+    60%{
+        left: 348px;
+        top: 60px;
+    }
+    70%{
+        left: 416px;
+        top: 90px;
+    }
+    80%{
+        left: 484px;
+        top: 120px;
+    }
+    90%{
+        left: 552px;
+        top: 150px;
+    }
+    100%{
+        left: 620px;
+        top: 180px;
+    }
+}
+
+
